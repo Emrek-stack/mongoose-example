@@ -1,0 +1,33 @@
+<div>
+    <form method="get">
+        <div>
+            name : <input type="text" name="title">
+        </div>
+        <div>
+            gsm : <input type="text" name="gsm">
+        </div>
+        <div>
+            location : <input type="text" name="location">
+        </div>
+        <div>
+            allow Back : <input type="checkbox" name="allowBack">
+        </div>
+        <div>
+            <button type="submit">Search</button>
+        </div>
+    </form>
+</div>
+<div>
+{{# each artists }}
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>{{ this.title }}</h3>
+                <br>
+                <small> {{ this.gsm}} </small>
+                <br>
+                <p class="description">{{ this.description }}</p>
+            </div>
+            <div><a href="edit/{{ this._id }}">edit</a></div>
+        </div>
+{{/each}}
+</div>

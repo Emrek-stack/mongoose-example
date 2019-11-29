@@ -1,0 +1,52 @@
+<form method="POST">
+    <div>
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" value="{{ this.title }}" placeholder="Title" />
+    </div>
+    <div>
+        <label for="url">Url</label>
+        <input id="url" type="text" name="url" value="{{ this.url }}" placeholder="Url" />
+    </div>
+    <div>
+        <label for="description">Description</label>
+        <input id="description" type="text" name="description" value="{{ this.description }}"
+            placeholder="description" />
+    </div>
+
+    <div>
+        <label for="gsm">Gsm</label>
+        <input id="gsm" type="text" name="gsm" value="{{ this.gsm }}" placeholder="gsm" />
+    </div>
+
+    <div>
+        <label for="properties[location]">Location</label>
+        <input id="properties[location]" type="text" name="properties[location]"
+            value="{{ this.properties.location }}" />
+    </div>
+    <div>
+        <label for="properties[price]">Price</label>
+        <input id="properties[price]" type="text" name="properties[price]" value="{{ this.properties.price }}" />
+    </div>
+    <div>
+        <label for="properties[allowBack]">Allow Back</label>
+        <input id="properties[allowBack]" type="checkbox" name="properties[allowBack]"
+            value="{{ this.properties.allowBack }}" />
+    </div>
+    <div>
+        <label for="status[isDeleted]">Deleted?</label>
+        <input id="status[isDeleted]" type="checkbox" name="status[isDeleted]" value="{{ this.status.isDeleted }}" />
+    </div>
+    <div>
+        <label for="status[isUnavaliable]">Unavaliable?</label>
+        <input id="status[isUnavaliable]" type="checkbox" name="status[isUnavaliable]"
+            value="{{ this.status.isUnavaliable }}" />
+    </div>
+    <div>
+        <label for="status[isTrans]">Trans?</label>
+        <input id="status[isTrans]" type="checkbox" name="status[isTrans]" value="{{ this.status.isTrans }}" />
+    </div>
+    <div>
+        <input type="hidden" value="{{ this._id }}" id="id" name="id"/>
+        <button type="submit">Update!</button>
+    </div>
+</form>
